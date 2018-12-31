@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FFE845D-2E4F-440E-8B9F-17AFCB9D166B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bau.Libraries.LibFtpClient</RootNamespace>
+    <AssemblyName>LibFtpClient</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\ArxOne.Ftp.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventArguments\CheckCertificateEventArgs.cs" />
+    <Compile Include="Exceptions\FtpAuthenticationException.cs" />
+    <Compile Include="Exceptions\FtpFileException.cs" />
+    <Compile Include="Exceptions\FtpProtocolException.cs" />
+    <Compile Include="Exceptions\FtpTransportException.cs" />
+    <Compile Include="FtpClientCommands.cs" />
+    <Compile Include="FtpPath.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpAbstractFileCommand.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpActualDirectoryCommand.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpChangeDirectoryCommand.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpMlsdCommand.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpListCommand.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpMakeDirectoryCommand.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpRenameCommand.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpStatCommand.cs" />
+    <Compile Include="Sessions\Commands\FtpCommand.cs" />
+    <Compile Include="Sessions\Commands\FtpLoginCommand.cs" />
+    <Compile Include="Sessions\Commands\Files\FtpDeleteCommand.cs" />
+    <Compile Include="Sessions\Commands\FtpEmptyStreamCommand.cs" />
+    <Compile Include="Sessions\Commands\Server\FtpAuthCommand.cs" />
+    <Compile Include="Sessions\Commands\Server\FtpEprtCommand.cs" />
+    <Compile Include="Sessions\Commands\Server\FtpFeatCommand.cs" />
+    <Compile Include="Sessions\Commands\Server\FtpOptsCommand.cs" />
+    <Compile Include="Sessions\Commands\Server\FtpPortCommand.cs" />
+    <Compile Include="Sessions\Commands\Server\FtpSetParameterCommand.cs" />
+    <Compile Include="Sessions\Commands\Server\FtpSystemCommand.cs" />
+    <Compile Include="Sessions\Commands\Streams\FtpAbstractStreamCommand.cs" />
+    <Compile Include="Sessions\Commands\Streams\FtpChangePassiveCommand.cs" />
+    <Compile Include="Sessions\Commands\Streams\FtpRetrieveCommand.cs" />
+    <Compile Include="Sessions\Commands\Streams\FtpStoreCommand.cs" />
+    <Compile Include="Sessions\Commands\Streams\FtpTransferModeCommand.cs" />
+    <Compile Include="Sessions\FtpServerFeatures.cs" />
+    <Compile Include="Sessions\Network\FtpActiveStream.cs" />
+    <Compile Include="FtpClient.cs" />
+    <Compile Include="Parameters\FtpClientParameters.cs" />
+    <Compile Include="FtpEntry.cs" />
+    <Compile Include="Exceptions\FtpException.cs" />
+    <Compile Include="FtpReply.cs" />
+    <Compile Include="Sessions\FtpConnection.cs" />
+    <Compile Include="Sessions\Network\FtpActiveStreamFactory.cs" />
+    <Compile Include="Sessions\Network\FtpPasiveStreamFactory.cs" />
+    <Compile Include="Sessions\Network\FtpPassiveStream.cs" />
+    <Compile Include="Sessions\Network\FtpStream.cs" />
+    <Compile Include="Sessions\Network\FtpStreamFactory.cs" />
+    <Compile Include="Sessions\Network\FtpTransportStream.cs" />
+    <Compile Include="Sessions\Network\FtpTransportStreamFactory.cs" />
+    <Compile Include="Sessions\Network\SocketExtensions.cs" />
+    <Compile Include="Sessions\Platform\FtpPlatform.cs" />
+    <Compile Include="Sessions\Platform\UnixFtpPlatform.cs" />
+    <Compile Include="Sessions\Platform\WindowsFtpPlatform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EventArguments\ProtocolMessageEventArgs.cs" />
+    <Compile Include="Sessions\FtpSessionState.cs" />
+    <Compile Include="Sessions\FtpServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\ArxOne.Ftp.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

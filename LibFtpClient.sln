@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibFtpClient", "src\LibFtpClient\LibFtpClient\LibFtpClient.csproj", "{2FFE845D-2E4F-440E-8B9F-17AFCB9D166B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibFtp", "test\TestLibFtp\TestLibFtp.csproj", "{A5AC6C51-A901-449D-AE96-06EDF4CD8AF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FFE845D-2E4F-440E-8B9F-17AFCB9D166B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FFE845D-2E4F-440E-8B9F-17AFCB9D166B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FFE845D-2E4F-440E-8B9F-17AFCB9D166B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FFE845D-2E4F-440E-8B9F-17AFCB9D166B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5AC6C51-A901-449D-AE96-06EDF4CD8AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5AC6C51-A901-449D-AE96-06EDF4CD8AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5AC6C51-A901-449D-AE96-06EDF4CD8AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5AC6C51-A901-449D-AE96-06EDF4CD8AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EDB343C-4C77-4FB9-9B52-7B7DC0AB69CA}
+	EndGlobalSection
+EndGlobal
